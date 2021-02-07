@@ -1,4 +1,6 @@
 Flask==1.1.2
 flask-cors
+flask_swagger
+flask_swagger_ui
 SQLAlchemy==1.3.23
 ipdb==0.11

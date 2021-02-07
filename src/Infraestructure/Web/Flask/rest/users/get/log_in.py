@@ -3,7 +3,7 @@ from flask import Blueprint, request, jsonify
 from flask_cors import cross_origin
 
 
-blueprint = Blueprint('users', __name__)
+blueprint = Blueprint('log_in', __name__)
 
 @blueprint.route('/login', methods=['GET'])
 @cross_origin()
