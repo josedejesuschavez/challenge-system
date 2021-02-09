@@ -15,12 +15,14 @@ swaggerui_blueprint = get_swaggerui_blueprint(
 )
 
 
-class UsersRegisterBlueprint:
-    def __init__(self, app):
-        self.app = app
 
-    def register(self):
-        self.app.register_blueprint(log_in.blueprint)
-        self.app.register_blueprint(log_out.blueprint)
-        self.app.register_blueprint(swaggerui_blueprint)
-        return self.app
+
+class UsersRegisterBlueprint():
+    def __init__(self):
+        pass
+
+    def register(self, app):
+        app.register_blueprint(log_in.blueprint)
+        app.register_blueprint(log_out.blueprint)
+        app.register_blueprint(swaggerui_blueprint)
+        return app

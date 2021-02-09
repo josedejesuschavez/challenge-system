@@ -7,6 +7,7 @@ services:
             - FLASK_APP=src/Infraestructure/Web/Flask/wsgi.py
             - FLASK_ENV=development
             - FLASK_DEBUG=1
+            - PYTHONPATH="$PYTHONPATH:/code"
         ports:
             - 5000:5000
         volumes:

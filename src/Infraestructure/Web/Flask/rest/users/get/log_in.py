@@ -8,4 +8,4 @@ blueprint = Blueprint('log_in', __name__)
 @blueprint.route('/login', methods=['GET'])
 @cross_origin()
 def login():
-    return jsonify({'token_id': '-134'})
+    return jsonify({'token_id': 'login'})
