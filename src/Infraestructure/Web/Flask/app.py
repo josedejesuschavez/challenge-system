@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from rest.users.register_blueprint import UsersRegisterBlueprint
+from Infraestructure.Web.Flask.rest.users.register_blueprint import UsersRegisterBlueprint
 from abc import ABC, abstractmethod
 
 class RegisterBlueprint(ABC):
