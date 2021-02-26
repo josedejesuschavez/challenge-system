@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from Infraestructure.Web.Flask.rest.users.register_blueprint import UsersRegisterBlueprint
+from src.Infraestructure.Web.Flask.rest.users.register_blueprint import UsersRegisterBlueprint
 
 
 class RegisterModulesBlueprint:
