@@ -1,0 +1,15 @@
+{ "message": "Esto es un Info", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Error", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Error", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Error", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Info", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Info", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Warning", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Info", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Info", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un Warning", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un ", "context": {"Servidor": "Servidor A"} }
+{ "message": "Esto es un ", "context": {"Servidor": "Servidor A"} }
+{ "message": "hola", "context": {"Servidor": "Servidor A"} }
+{ "message": "hola2", "context": {"Servidor": "Servidor A"} }
+{ "message": "hola3", "context": {"Servidor": "Servidor A"} }
