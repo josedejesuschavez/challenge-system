@@ -1,0 +1,4 @@
+FROM node:15.10.0
+RUN mkdir /code
+WORKDIR /code
+EXPOSE 4000
