@@ -1,4 +1,9 @@
 FROM node:15.10.0
-RUN mkdir /code
-WORKDIR /code
+RUN npm install -g @angular/cli
+
+# RUN mkdir /code
+
+WORKDIR /code/Angular
+
+# ENTRYPOINT ["tail", "-f", "/dev/null"]
 EXPOSE 4000
