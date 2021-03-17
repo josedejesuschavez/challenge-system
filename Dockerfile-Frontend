@@ -1,18 +1,4 @@
 FROM node:15.10.0
 RUN npm install -g @angular/cli
-
-# WORKDIR /code
-# COPY requirements.txt /code
-# RUN npm install -g @angular/cli
-
-# RUN mkdir /code
-
-# CMD cat
-# CMD echo "$(ls)"
-# CMD ng --version
-WORKDIR /code
-# COPY README.md /code
-# COPY src/Infraestructure/Web/Angular/package*.json ./
-# RUN npm install
-ENTRYPOINT ["tail", "-f", "/dev/null"]
-EXPOSE 4000
+WORKDIR /code/Angular
+EXPOSE 4200
