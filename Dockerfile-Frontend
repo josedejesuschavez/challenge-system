@@ -1,4 +1,5 @@
 FROM node:15.10.0
 RUN npm install -g @angular/cli
 WORKDIR /code/Angular
+#ENTRYPOINT ["tail", "-f", "/dev/null"]
 EXPOSE 4200
