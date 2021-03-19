@@ -1,2 +1,55 @@
-<p>pits-dashboard works!</p>
-<app-team-member-read-only></app-team-member-read-only>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Activo MT</th>
+            <th scope="col">Disponible para OPS</th>
+            <th scope="col">Ubicacion</th>
+            <th scope="col">CV</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Role</th>
+            <th scope="col">Tech Skill</th>
+            <th scope="col">Ingles</th>
+            <th scope="col">Equipo</th>
+            <th scope="col">Equipo futuro</th>
+            <th scope="col">Fecha de inico equipo actual</th>
+            <th scope="col">Main #1</th>
+            <th scope="col">Main #2</th>
+            <th scope="col">Secondary #1</th>
+            <th scope="col">Secondary #2</th>
+            <th scope="col">Secondary #3</th>
+            <th scope="col">Target Tech Main (Training)</th>
+            <th scope="col">Next Tech Secondary (Training)</th>
+            <th scope="col">Notas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let teamMember of teamMembers; let i = index">
+            <th><input class="form-check-input" type="checkbox" [checked]="teamMember.activo_mt" name="activo_mt" disabled></th>
+            <th><input class="form-check-input" type="checkbox" [checked]="teamMember.disponible_ops" name="disponible_ops" disabled></th>
+            <th><label>{{teamMember.location}}</label></th>
+            <th><a class="btn btn-primary" href="{{teamMember.link_cv}}" target="_blank" role="button">Link</a></th>
+            <th><label>{{teamMember.email}}</label></th>
+            <th><label>{{teamMember.full_name}}</label></th>
+            <th><label>{{teamMember.role}}</label></th>
+            <th><label class="alert" [ngClass]="{'alert-info': teamMember.techSkill === 'Jr', 'alert-warning': teamMember.techSkill === 'Mid', 'alert-success': teamMember.techSkill === 'Sr'}">{{teamMember.techSkill}}</label></th>
+            <th><label class="alert" [ngClass]="{'alert-danger': teamMember.english < 6, 'alert-warning': teamMember.english < 8, 'alert-success': teamMember.english >= 8}">{{teamMember.english}}</label></th>
+            <th><label>{{teamMember.current_team}}</label></th>
+            <th><label>{{teamMember.next_team}}</label></th>
+            <th><label>{{teamMember.date_start_team}}</label></th>
+            <th><label title="{{teamMember.main_1_score}}" class="alert" [ngClass]="{'alert-danger': teamMember.main_1_score < 60, 'alert-warning': teamMember.main_1_score < 80, 'alert-success': teamMember.main_1_score >= 80}">{{teamMember.main_1}}</label></th>
+            <th><label title="{{teamMember.main_2_score}}" class="alert" [ngClass]="{'alert-danger': teamMember.main_2_score < 60, 'alert-warning': teamMember.main_2_score < 80, 'alert-success': teamMember.main_2_score >= 80}">{{teamMember.main_2}}</label></th>
+            <th><label title="{{teamMember.secondary_1_score}}" class="alert" [ngClass]="{'alert-danger': teamMember.secondary_1_score < 60, 'alert-warning': teamMember.secondary_1_score < 80, 'alert-success': teamMember.secondary_1_score >= 80}">{{teamMember.secondary_1}}</label></th>
+            <th><label title="{{teamMember.secondary_2_score}}" class="alert" [ngClass]="{'alert-danger': teamMember.secondary_2_score < 60, 'alert-warning': teamMember.secondary_2_score < 80, 'alert-success': teamMember.secondary_2_score >= 80}">{{teamMember.secondary_2}}</label></th>
+            <th><label title="{{teamMember.secondary_3_score}}" class="alert" [ngClass]="{'alert-danger': teamMember.secondary_3_score < 60, 'alert-warning': teamMember.secondary_3_score < 80, 'alert-success': teamMember.secondary_3_score >= 80}">{{teamMember.secondary_3}}</label></th>
+            <th><label>{{teamMember.target_tech_main}}</label></th>
+            <th><label>{{teamMember.next_tech_secondary}}</label></th>
+            <th><label>{{teamMember.notes}}</label></th>
+        </tr>
+    </tbody>
+</table>
+<div class="d-flex justify-content-end">
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-primary">Agregar miembro de equipo</button>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PitsDashboardComponent } from './pits-dashboard/pits-dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -13,7 +13,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes),
+    CommonModule
+  ],
   exports: [RouterModule],
   declarations: [
     PitsDashboardComponent,
