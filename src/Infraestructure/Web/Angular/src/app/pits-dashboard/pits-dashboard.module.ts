@@ -13,8 +13,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes), TeamMemberReadOnlyComponent],
-  exports: [RouterModule, TeamMemberReadOnlyComponent],
-  declarations: [TeamMemberReadOnlyComponent]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
+  declarations: [
+    PitsDashboardComponent,
+    TeamMemberReadOnlyComponent
+  ]
 })
 export class PitsDashboardModule { }
