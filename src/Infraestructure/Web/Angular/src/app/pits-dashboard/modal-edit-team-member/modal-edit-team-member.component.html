@@ -1,0 +1,201 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Miembro de equipo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="container">
+                        <div class="row align-items-start">
+                            <div class="col-4">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="activo_mt">
+                                    <label class="form-check-label" for="activo_mt">Activo MT</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="disponible_ops">
+                                    <label class="form-check-label" for="disponible_ops">Disponible para OPS</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">Ubicación</label>
+                                    <input type="text" required class="form-control" id="location">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="link_cv" class="form-label">CV</label>
+                                    <input type="text" required class="form-control" id="link_cv">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" required class="form-control" id="email">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="full_name" class="form-label">Nombre</label>
+                                    <input type="text" required class="form-control" id="full_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="role" class="form-label">Role</label>
+                                    <input type="text" required class="form-control" id="role">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="techSkill" class="form-label">Tech Skill</label>
+                                    <select class="form-select" aria-label="Tech Skill" id="techSkill">
+                                        <option value="Jr">Jr</option>
+                                        <option value="Mid">Mid</option>
+                                        <option value="Sr">Sr</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="english" class="form-label">Inglés</label>
+                                    <input type="range" class="form-range" min="0" max="10" id="english">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="current_team" class="form-label">Equipo</label>
+                                    <input type="text" required class="form-control" id="current_team">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="next_team" class="form-label">Equipo futuro</label>
+                                    <input type="text" class="form-control" id="next_team">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="date_start_team" class="form-label">Fecha de inico equipo actual</label>
+                                    <input type="date" required class="form-control" id="date_start_team">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="main_1" class="form-label">Main #1</label>
+                                    <input type="text" required class="form-control" id="main_1">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="main_1_score" class="form-label">Main #1 Score</label>
+                                    <input type="number" required class="form-control" id="main_1_score" min="0"
+                                        max="100">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="main_2" class="form-label">Main #2</label>
+                                    <input type="text" class="form-control" id="main_2">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="main_2_score" class="form-label">Main #1 Score</label>
+                                    <input type="number" required class="form-control" id="main_2_score" min="0"
+                                        max="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="secondary_1" class="form-label">Secondary #1</label>
+                                    <input type="text" class="form-control" id="secondary_1">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="secondary_1_score" class="form-label">Secondary #1 Score</label>
+                                    <input type="number" required class="form-control" id="secondary_1_score" min="0"
+                                        max="100">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="secondary_2" class="form-label">Secondary #2</label>
+                                    <input type="text" class="form-control" id="secondary_2">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="secondary_2_score" class="form-label">Secondary #2 Score</label>
+                                    <input type="number" required class="form-control" id="secondary_2_score" min="0"
+                                        max="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="secondary_3" class="form-label">Secondary #3</label>
+                                    <input type="text" class="form-control" id="secondary_3">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="secondary_3_score" class="form-label">Secondary #3 Score</label>
+                                    <input type="number" required class="form-control" id="secondary_3_score" min="0"
+                                        max="100">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="target_tech_main" class="form-label">Target Tech Main</label>
+                                    <input type="text" class="form-control" id="target_tech_main">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="next_tech_secondary" class="form-label">Next Tech Secondary</label>
+                                    <input type="text" class="form-control" id="next_tech_secondary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="notes" class="form-label">Notas</label>
+                                    <textarea class="form-control" placeholder="Notas" id="notes"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="d-flex justify-content-end">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
