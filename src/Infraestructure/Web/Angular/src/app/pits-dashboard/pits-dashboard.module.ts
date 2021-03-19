@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PitsDashboardComponent } from './pits-dashboard/pits-dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
+import { TeamMemberReadOnlyComponent } from './team-member-read-only/team-member-read-only.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(routes), TeamMemberReadOnlyComponent],
+  exports: [RouterModule, TeamMemberReadOnlyComponent],
+  declarations: [TeamMemberReadOnlyComponent]
 })
 export class PitsDashboardModule { }

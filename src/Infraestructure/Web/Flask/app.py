@@ -10,4 +10,5 @@ def create_app():
     register_module.append_module(UsersRegisterBlueprint())
     app = register_module.register()
     CORS(app)
+    app.config["JWT_SECRET_KEY"] = "super-secret"
     return app
