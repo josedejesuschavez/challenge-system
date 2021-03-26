@@ -6,6 +6,8 @@ import { TeamMemberReadOnlyComponent } from './team-member-read-only/team-member
 import { GridTeamMembersComponent } from './grid-team-members/grid-team-members.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ModalEditTeamMemberComponent } from './modal-edit-team-member/modal-edit-team-member.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -18,7 +20,10 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [RouterModule],
   declarations: [

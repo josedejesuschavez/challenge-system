@@ -20,7 +20,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile-Frontend
-        #command: ng serve --host 0.0.0.0
+        command: ng serve --host 0.0.0.0
         ports:
             - 4200:4200
         volumes:
@@ -31,6 +31,8 @@ services:
         image: postgres:13.1
         ports:
             - 5432:5432
+        volumes:
+            - ./postgresql-data:/var/lib/postgresql/data
         environment:
             - POSTGRES_USER=challenge
             - POSTGRES_PASSWORD=123qweQWE
@@ -41,12 +43,12 @@ services:
             - 8080:8080
         depends_on:
             - database
-    #elasticsearch:
-    #    image: elasticsearch:6.4.2
-    #    ports:
-    #        - 9200:9200
-    #    volumes:
-    #        - './elasticstack/elasticsearch/data:/usr/share/elasticsearch/data'
+    elasticsearch:
+        image: elasticsearch:6.4.2
+        ports:
+            - 9200:9200
+        volumes:
+            - './elasticstack/elasticsearch/data:/usr/share/elasticsearch/data'
     #logstash:
     #    image: logstash:6.4.2
     #    ports:

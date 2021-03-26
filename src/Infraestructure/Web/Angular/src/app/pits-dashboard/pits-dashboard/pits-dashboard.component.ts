@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { PitsDashboardServiceService } from '../services/pits-dashboard-service.service';
+import { TeamMemberDTO } from '../team-member-dto';
+
 
 @Component({
   selector: 'app-pits-dashboard',
@@ -7,13 +10,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PitsDashboardComponent implements OnInit {
 
-  teamMembers = [
-    {activo_mt:1, disponible_ops:0, location:'GDL', link_cv:'www.google.com', email:'a@correo.com', full_name:'Jose Chavez', role:'Dev', techSkill: 'Sr', english:10, current_team:'confie', next_team:'nexusfuel', date_start_team:'2020-05-02', main_1:'Python', main_1_score: 80, main_2:'.Net', main_2_score:79, secondary_1:'Python', secondary_1_score:90, secondary_2:'.Net', secondary_2_score:70, secondary_3:'Python', secondary_3_score:40, target_tech_main:'', next_tech_secondary:'', notes:'Vacaciones'},
-  ];
+  teamMembers: any
+  response: any
+  teamMember: TeamMemberDTO | undefined
+  @ViewChild('btn-close-form') btnCloseForm: ElementRef | undefined;
 
-  constructor() { }
+
+  constructor(private pitsDashboardServiceService: PitsDashboardServiceService) { }
 
   ngOnInit(): void {
+    this.refreshFeature()
   }
 
+  refreshFeature() {
+    setTimeout(()=>{ 
+      this.pitsDashboardServiceService.getTeamMembers().subscribe(result => {
+        this.response = result
+        this.teamMembers = this.response.team_members
+      })
+    }, 1000);
+  }
+
+  teamMemberSelected(teamMember: TeamMemberDTO) {
+    this.teamMember = teamMember
+  }
+
+  teamMemberDelete(teamMember: TeamMemberDTO) {
+    this.pitsDashboardServiceService.deleteTeamMembers(teamMember.id).subscribe(result=>{
+      this.refreshFeature()
+    })
+  }
+
+  modalActionCompleted(event: string) {
+    let btnClose:HTMLElement= document.getElementById('btn-close-form') as HTMLElement
+    btnClose.click()
+    this.refreshFeature()
+  }
 }

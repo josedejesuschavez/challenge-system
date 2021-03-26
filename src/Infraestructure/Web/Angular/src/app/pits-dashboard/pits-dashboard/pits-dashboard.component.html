@@ -1,3 +1,3 @@
-<app-grid-team-members [teamMembers]="teamMembers"></app-grid-team-members>
+<app-grid-team-members [teamMembers]="teamMembers" (teamMemberDelete)="teamMemberDelete($event)" (teamMemberSelected)="teamMemberSelected($event)"></app-grid-team-members>
 
-<app-modal-edit-team-member></app-modal-edit-team-member>
+<app-modal-edit-team-member [teamMember]="teamMember" (modalActionCompleted)="modalActionCompleted($event)"></app-modal-edit-team-member>

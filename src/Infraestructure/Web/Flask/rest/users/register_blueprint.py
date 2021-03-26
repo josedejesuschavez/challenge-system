@@ -22,7 +22,6 @@ class UsersRegisterBlueprint(RegisterBlueprint):
         pass
 
     def register(self, app):
-        app.register_blueprint(log_in.blueprint)
         app.register_blueprint(log_out.blueprint)
         app.register_blueprint(swaggerui_blueprint)
         return app
